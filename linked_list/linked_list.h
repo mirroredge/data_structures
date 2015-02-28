@@ -4,6 +4,10 @@ typedef struct Node{
   struct Node *prev;
 }Node;
 
-Node *delete(Node *root, int value);
-Node *insert(Node *root, int value);
-Node *find(Node *root,int value);
+Node *delete(Node*, int);
+Node *insert(Node*, int);
+Node *insert_at(Node*, int, int);
+Node *find(Node*,int);
+void destroy(Node*);
+int size(Node*);
+int index_of(Node*, int);
