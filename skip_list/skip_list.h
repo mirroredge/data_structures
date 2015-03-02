@@ -43,10 +43,11 @@ typedef struct SkipList{
   B <-> 1 <-> 3 <-> 4 <-> 5 <-> 8 <-> E
 
 */
-
+int level_gen(level);
 SkipList *init();
 int insert(SkipList*,int key, int value);
 SkipList *delete(SkipList*,int key);
 SkipList *update(SkipList*,int key, int val);
 int *get(SkipList*,int key);
 Node *find_node_pos(SkipList *sl, int key);
+void init_node(Node *to_set, int key, int value, Node* up, Node *down, Node *left, Node *right, node_type_t type);
